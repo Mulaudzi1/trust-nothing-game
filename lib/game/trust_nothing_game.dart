@@ -48,10 +48,10 @@ class _TrustNothingGameState extends State<TrustNothingGame> {
   }
 
   void _reset() => setState(() {
-    _position = _level.spawn;
-    _velocity = Offset.zero;
-    _dead = false;
-  });
+        _position = _level.spawn;
+        _velocity = Offset.zero;
+        _dead = false;
+      });
 
   Future<void> _die() async {
     if (_dead) return;
@@ -184,22 +184,22 @@ class _TrustNothingGameState extends State<TrustNothingGame> {
   }
 
   Widget _hold(IconData icon, void Function(bool) change) => GestureDetector(
-    onTapDown: (_) => change(true),
-    onTapUp: (_) => change(false),
-    onTapCancel: () => change(false),
-    child: _button(icon),
-  );
+        onTapDown: (_) => change(true),
+        onTapUp: (_) => change(false),
+        onTapCancel: () => change(false),
+        child: _button(icon),
+      );
 
   Widget _button(IconData icon) => Container(
-    width: 72,
-    height: 72,
-    decoration: BoxDecoration(
-      color: Colors.white.withValues(alpha: .14),
-      borderRadius: BorderRadius.circular(22),
-      border: Border.all(color: Colors.white24),
-    ),
-    child: Icon(icon, color: Colors.white, size: 38),
-  );
+        width: 72,
+        height: 72,
+        decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: .14),
+          borderRadius: BorderRadius.circular(22),
+          border: Border.all(color: Colors.white24),
+        ),
+        child: Icon(icon, color: Colors.white, size: 38),
+      );
 }
 
 class _GamePainter extends CustomPainter {

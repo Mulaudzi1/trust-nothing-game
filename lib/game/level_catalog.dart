@@ -17,9 +17,8 @@ class LevelCatalog {
       if (local >= 4)
         TrapData(
           rect: Rect.fromLTWH(500 + (local % 3) * 60, 390, 55, 30),
-          kind: local.isEven
-              ? TrapKind.disappearingFloor
-              : TrapKind.movingHazard,
+          kind:
+              local.isEven ? TrapKind.disappearingFloor : TrapKind.movingHazard,
         ),
       if (local >= 10)
         const TrapData(
