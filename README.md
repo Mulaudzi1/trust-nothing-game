@@ -1,5 +1,10 @@
 # Trust Nothing
 
+[![Flutter CI](https://github.com/Mulaudzi1/trust-nothing-game/actions/workflows/flutter-ci.yml/badge.svg)](https://github.com/Mulaudzi1/trust-nothing-game/actions/workflows/flutter-ci.yml)
+![Flutter](https://img.shields.io/badge/Flutter-stable-02569B?logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-3.4%2B-0175C2?logo=dart&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 An original mobile trap-platformer inspired by the deceptive-platformer genre. The goal is simple: reach the exit. The level, however, cannot be trusted.
 
 ## Features
@@ -73,3 +78,7 @@ Trust Nothing does not contain Level Devil source code, artwork, audio, branding
 ## Status
 
 The source is structured for CI validation. Always confirm the current CI run is green before treating a commit as a release candidate.
+
+## License
+
+[MIT](LICENSE) © 2026 Ohula Mulaudzi
