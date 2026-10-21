@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -57,8 +56,9 @@ class _TrustNothingGameState extends State<TrustNothingGame> {
     if (_dead) return;
     _dead = true;
     await _progress.recordDeath();
-    if (mounted)
+    if (mounted) {
       Future<void>.delayed(const Duration(milliseconds: 450), _reset);
+    }
   }
 
   Future<void> _finish() async {
@@ -112,8 +112,9 @@ class _TrustNothingGameState extends State<TrustNothingGame> {
   }
 
   void _doJump() {
-    if (_grounded && !_dead)
+    if (_grounded && !_dead) {
       setState(() => _velocity = Offset(_velocity.dx, _jump));
+    }
   }
 
   @override
@@ -218,14 +219,16 @@ class _GamePainter extends CustomPainter {
     final dangerPaint = Paint()..color = const Color(0xFFE74C3C);
     final exitPaint = Paint()..color = const Color(0xFF49D17D);
     final playerPaint = Paint()..color = const Color(0xFFF4F6FA);
-    for (final p in level.platforms)
+    for (final p in level.platforms) {
       canvas.drawRRect(
         RRect.fromRectAndRadius(scale(p.rect), const Radius.circular(4)),
         platformPaint,
       );
+    }
     for (final t in level.traps) {
-      if (t.kind != TrapKind.hiddenSpike)
+      if (t.kind != TrapKind.hiddenSpike) {
         canvas.drawRect(scale(t.rect), dangerPaint);
+      }
     }
     canvas.drawRect(scale(level.exit), exitPaint);
     canvas.drawRRect(

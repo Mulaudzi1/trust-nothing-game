@@ -41,11 +41,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _refresh() async {
     final unlocked = await _progress.unlockedLevel();
     final deaths = await _progress.deathCount();
-    if (mounted)
+    if (mounted) {
       setState(() {
         _unlocked = unlocked;
         _deaths = deaths;
       });
+    }
   }
 
   Future<void> _play(int level) async {
